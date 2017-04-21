@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.projpi</groupId>
+    <artifactId>jetItems</artifactId>
+    <version>1.1.0a</version>
+    <packaging>jar</packaging>
+
+    <!-- jetItems Plugin Info -->
+    <name>jetItems</name>
+    <description>A plugin that allows easy creation of items using JSON.</description>
+    <!--url></url-->
+
+    <licenses>
+        <license>
+            <name>Zlib License</name>
+            <url>http://opensource.org/licenses/Zlib</url>
+            <comments>Copyright (c) 2017, UberPilot.
+                This software is provided 'as-is', without any express or implied
+                warranty. In no event will the authors be held liable for any damages
+                arising from the use of this software.
+
+                Permission is granted to anyone to use this software for any purpose,
+                including commercial applications, and to alter it and redistribute it
+                freely, subject to the following restrictions:
+
+                1. The origin of this software must not be misrepresented; you must not
+                claim that you wrote the original software. If you use this software
+                in a product, an acknowledgment in the product documentation would be
+                appreciated but is not required.
+
+                2. Altered source versions must be plainly marked as such, and must not be
+                misrepresented as being the original software.
+
+                3. This notice may not be removed or altered from any source
+                distribution.</comments>
+        </license>
+    </licenses>
+
+
+    <developers>
+        <developer>
+            <name>UberPilot</name>
+            <url>http://projpi.org/plugins/</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <!--  Author and MainClass are used in plugin.yml -->
+        <author>UberPilot</author>
+        <mainClass>org.projpi.uberpilot.jetMech.items.JetItems</mainClass>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Dependencies and Repos -->
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.11.2-R0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.11.2-R0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>1.1</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>bstats-repo</id>
+            <url>http://repo.bstats.org/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+
+    <!-- Resources -->
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <defaultGoal>clean install</defaultGoal>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- Keeping filtering at true here reduces plugin.yml redundancy! -->
+                <filtering>true</filtering>
+                <includes>
+                    <include>plugin.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- Keep filtering at false for other resources to prevent bad magic -->
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                    <exclude>plugin.yml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <artifactSet>
+                        <includes>
+                            <include>org.bstats:*</include>
+                        </includes>
+                    </artifactSet>
+                    <relocations>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <!-- Replace this with your package! -->
+                            <shadedPattern>org.projpi.uberpilot.jetMech.items</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

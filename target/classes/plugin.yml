@@ -1,0 +1,36 @@
+name: jetItems
+description: A plugin that allows easy creation of items using JSON.
+version: 1.0.0a
+author: UberPilot
+main: org.projpi.uberpilot.jetMech.items.JetItems
+website: ${url}
+commands:
+  jetitems:
+    description: Master command for all of jetItems.
+    usage: /jetItems help
+    aliases: [jitems, jetitems, jit]
+permissions:
+  jetItems.admin:
+    description: Gives access to all jetInfo commands.
+    children:
+      jetItems.give.self: true
+      jetItems.give.other: true
+      jetItems.list: true
+  jetItems.give.self:
+    description: Allows for giving items to yourself.
+    default: op
+  jetItems.give.other:
+    description: Allows for giving items to others.
+    default: op
+  jetItems.list:
+    description: Allows for listing all loaded items.
+    default: op
+  jetItems.help:
+    description: Allows for viewing the plugin help.
+    default: true
+  jetItems.helpx:
+    description: Allows for viewing the plugin help, including commands you don't have permission for.
+    default: op
+  jetItems.info:
+    description: Allows for viewing the plugin info.
+    default: true

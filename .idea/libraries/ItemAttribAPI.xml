@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ItemAttribAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/ItemAttribAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/ItemAttribAPI.jar!/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/ItemAttribAPI.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,37 @@
+[
+  {
+    "material" : "iron_ingot",
+    "id" : "steel_ingot",
+    "meta" : 0,
+    "value": 1,
+    "name" : "Steel Ingot",
+    "rarity" : "Common",
+    "quality" : "Average",
+    "itemType" : "Material",
+    "lore":
+    [
+      "A refined iron ingot that is both",
+      "stronger and lighter."
+    ]
+  },
+  {
+    "material" : "iron_ingot",
+    "id" : "steel_ingot2",
+    "meta" : 0,
+    "value":
+    {
+      "copper": 50,
+      "silver": 0,
+      "gold": 0
+    },
+    "name" : "Steel Ingot",
+    "rarity" : "Common",
+    "quality" : "Average",
+    "itemType" : "Material",
+    "lore":
+    [
+      "A refined iron ingot that is both",
+      "stronger and lighter."
+    ]
+  }
+]
