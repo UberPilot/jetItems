@@ -1,0 +1,25 @@
+item-format:
+  name: '%item-name% &7[%rarity-color%%item-level%&7]'
+  lore:
+    - '?%%'
+    - '?%%'
+    - '?%%'
+rarity:
+  none:
+    name: ''
+    lore: ''
+    color: ''
+    value-multiplier: 1.0
+  trash:
+    name: 'Trash'
+    #
+    lore: "&8•&8•&8•&8•&8•&8•&8•&8•"
+    color: '§8'
+    value-multiplier: 0.5
+    level: 0
+  common:
+  uncommon:
+  scarce:
+  rare:
+  epic:
+  legendary:

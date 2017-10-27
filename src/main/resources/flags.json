@@ -1,0 +1,17 @@
+[
+  {
+    "key":"rarity",
+    "type":"file",
+    "file":"rarity.json"
+  },
+  {
+    "key":"quality",
+    "type":"file",
+    "file":"quality.json"
+  },
+  {
+    "key":"itemType",
+    "type":"file",
+    "file":"itemType.json"
+  }
+]

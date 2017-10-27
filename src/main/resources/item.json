@@ -1,0 +1,65 @@
+[
+  {
+    "material" : "iron_ingot",
+    "id" : "steel_ingot",
+    "meta" : 0,
+    "name" : "Steel Ingot",
+    "rarity" : "Common",
+    "quality" : "Average",
+    "itemType" : "Material",
+    "lore":
+    [
+      "A refined iron ingot that is both",
+      "stronger and lighter."
+    ]
+  },
+  {
+    "material" : "iron_ingot",
+    "id" : "steel_ingot2",
+    "meta" : 0,
+    "name" : "Steel Ingot",
+    "rarity" : "Common",
+    "quality" : "Average",
+    "itemType" : "Material",
+    "glow": true,
+    "lore":
+    [
+      "A refined iron ingot that is both",
+      "stronger and lighter."
+    ]
+  },
+  {
+	"material": "iron_sword",
+	"id": "steel_sword",
+	"meta": 0,
+	"name": "Steel Blade",
+	"rarity": "Uncommon",
+	"quality": "Fine",
+	"itemType": "Weapon",
+	"glow": true,
+	"hideAttributes": false,
+	"attributes":
+	[
+	  {
+		"attribute": "attack_damage",
+		"slot": "main_hand",
+		"operation": 0,
+		"amount": -2.0
+	  },
+	  {
+		"attribute": "attack_speed",
+		"slot": "main_hand",
+		"operation": 0,
+		"amount": 1.0
+	  }
+	]
+    "lore":
+    [
+      "A blade built of steel, which",
+      "is much lighter than normal",
+	  "weapons.",
+	  "&7Speed: &aFast",
+	  "&7Damage: &c5"
+    ]
+  }
+]
